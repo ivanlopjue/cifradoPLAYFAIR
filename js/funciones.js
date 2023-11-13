@@ -2,14 +2,11 @@
 function generarArray(array){
 
     let resultArray = [];
-    //Comprobacion de que no hay letras iguales seguidas
-    //en ese caso se pone una x entre ellas
+    
     for (let i = 0; i < array.length; i++) {
         resultArray.push(array[i]); 
-        if (i < array.length - 1 && array[i] == array[i + 1]) {
-            resultArray.push('X'); 
-        }
     }
+    
     //Quitar espacios del array
     resultArraySinEspacios = resultArray.filter(elemento => elemento.trim() != "");
 
@@ -30,6 +27,15 @@ function dividirArrayEnPares(array){
 
     for (let i = 0; i < array.length; i+=2) {
         nuevosArrays.push(array.slice(i, i + 2));
+    }
+
+    //Comprobacion de que no hay letras iguales seguidas
+    //en ese caso se pone una x entre ellas
+    for (let i = 0; i < nuevosArrays.length; i++) {
+        
+        if (i < nuevosArrays.length - 1 && nuevosArrays[i] == nuevosArrays[i + 1]) {
+            resultArray.push('X'); 
+        }
     }
 
     return nuevosArrays;
@@ -91,7 +97,7 @@ function principal(opcion, conClave, clave, caracterUno, caracterDos){
         ];
     } else {
         var arrayAComparar = generarArrayConClave(clave);
-        console.log(arrayAComparar);
+        //console.log(arrayAComparar);
     }
 
     var filaUno = -1;
@@ -119,7 +125,7 @@ function principal(opcion, conClave, clave, caracterUno, caracterDos){
     }
 
     //opcion si es para cifrar
-    if(opcion == "code"){
+    if(opcion == "encode"){
         //comprobacion de que los caracteres se encuentran en la misma fila
         //si es correcto su columna aumenta en uno
         if(filaUno == filaDos){ 
@@ -157,38 +163,6 @@ function principal(opcion, conClave, clave, caracterUno, caracterDos){
     
         //Si no coincide columna ni fila
         } else if(filaUno != filaDos && columnaUno != columnaDos){
-            //comprobacion de que tanto la columna como la fila esta dentro del array
-            if(filaUno > 4){
-                filaUno = 0;
-            }
-    
-            if(filaDos > 4){
-                filaDos = 0;
-            }
-
-            if(filaUno < 0){
-                filaUno = 4;
-            }
-    
-            if(filaDos < 0){
-                filaDos = 4;
-            }
-
-            if(columnaUno > 4){
-                columnaUno = 0;
-            }
-    
-            if(columnaDos > 4){
-                columnaDos = 0;
-            }
-
-            if(columnaUno < 0){
-                columnaUno = 4;
-            }
-    
-            if(columnaDos < 0){
-                columnaDos = 4;
-            }
     
             caracterUno = arrayAComparar[filaUno][columnaDos];
             caracterDos = arrayAComparar[filaDos][columnaUno];
@@ -230,38 +204,6 @@ function principal(opcion, conClave, clave, caracterUno, caracterDos){
     
         } else if(filaUno != filaDos && columnaUno != columnaDos){
             
-            if(filaUno > 4){
-                filaUno = 0;
-            }
-    
-            if(filaDos > 4){
-                filaDos = 0;
-            }
-
-            if(filaUno < 0){
-                filaUno = 4;
-            }
-    
-            if(filaDos < 0){
-                filaDos = 4;
-            }
-
-            if(columnaUno > 4){
-                columnaUno = 0;
-            }
-    
-            if(columnaDos > 4){
-                columnaDos = 0;
-            }
-
-            if(columnaUno < 0){
-                columnaUno = 4;
-            }
-    
-            if(columnaDos < 0){
-                columnaDos = 4;
-            }
-    
             caracterUno = arrayAComparar[filaUno][columnaDos];
             caracterDos = arrayAComparar[filaDos][columnaUno];
             

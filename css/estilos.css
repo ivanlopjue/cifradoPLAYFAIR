@@ -27,6 +27,7 @@ textarea, input{
     background-color: black;
     color: white;
     padding: 5px;
+    resize: none;
 }
 
 h1{

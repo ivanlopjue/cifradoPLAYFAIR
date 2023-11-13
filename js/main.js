@@ -9,7 +9,7 @@ $(function(){
 
         var texto = $("#textoUser").val();
         var clave = $("#palabraUser").val();
-        opcion = "code";
+        opcion = "encode";
 
         //Se transforma a mayusculas el texto introducido
         var arrayInicialTexto = texto.toUpperCase().split("");
@@ -26,6 +26,7 @@ $(function(){
             for(i = 0; i < paresDeArray.length; i++){
 
                 var arrayResultado = principal(opcion, false, clave, paresDeArray[i][0], paresDeArray[i][1]);
+                
                 $("#resultado").append(arrayResultado);
 
             }
