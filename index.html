@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PLAYFAIR</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <div id="contenedor">
+            <table>
+                <tr>
+                    <td>
+                        <h1>PLAYFAIR</h1>
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="textoUser" id="textoUser" cols="60" rows="10" placeholder="Introduce el texto..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="palabraUser" type="text" name="palabraUser" placeholder="Palabra/s clave...">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr>
+                        <button id="code">CIFRAR</button>
+                        <button id="decode">DESCIFRAR</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="resultado" id="resultado" cols="60" rows="3" placeholder="El resultado saldrá aquí..." readonly></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+         <!-- script parra utilizar JQuery -->
+         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+         <script src="./js/main.js"></script>
+         <script src="./js/funciones.js"></script>
+</html>

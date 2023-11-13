@@ -1,0 +1,56 @@
+body {
+    background-image: url("../img/hewlett-packard-enterprise-announces-european-hosted-hpe-greenlake-cloud-offer-with-interxion.jpg");
+    padding: 2rem 20%;
+    font-size: 35px;
+}
+
+#contenedor {
+    text-align: center;
+    align-content: center;
+    background-color: transparent;
+    color: white;
+    border: 20px solid rgb(24, 179, 136);
+    padding: 5%;
+}
+
+table{
+   margin: auto;
+}
+
+td {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+textarea, input{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+h1{
+    /* color: rgb(24, 179, 136); */
+    color: white;
+    font-family: Arial,sans-serif;
+}
+
+button{
+    background-color: rgb(24, 179, 136);
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    width: 150px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+
+input {
+    padding: 10px;
+}
+
+#resultado{
+    text-align: center;
+    padding-top: 10px;
+}
