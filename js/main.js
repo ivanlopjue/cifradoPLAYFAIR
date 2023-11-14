@@ -11,11 +11,8 @@ $(function(){
         var clave = $("#palabraUser").val();
         opcion = "encode";
 
-        //Se transforma a mayusculas el texto introducido
-        var arrayInicialTexto = texto.toUpperCase().split("");
-
         //se genera el array con caracteres pares
-        var arrayAComparar = generarArray(arrayInicialTexto);
+        var arrayAComparar = generarArray(texto);
 
         //se divide el array en arrays de caracteres pares
         var paresDeArray = dividirArrayEnPares(arrayAComparar);

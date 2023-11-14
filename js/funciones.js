@@ -1,5 +1,15 @@
 // funcion para generar el array adecuado segun el texto del usuario
-function generarArray(array){
+function generarArray(texto){
+
+    var array = texto.toUpperCase().split("");
+
+    //Se hace la comprobacion de que ningun par de caracteres son iguales
+    //en caso de que lo sean se mete una 'X' en medio
+    for (let i = 0; i < array.length; i+=2) {
+        if(array[i] == array[i + 1]){
+            array.splice(i + 1, 0, "X");
+        }
+    }
 
     let resultArray = [];
     
@@ -29,14 +39,7 @@ function dividirArrayEnPares(array){
         nuevosArrays.push(array.slice(i, i + 2));
     }
 
-    //Comprobacion de que no hay letras iguales seguidas
-    //en ese caso se pone una x entre ellas
-    for (let i = 0; i < nuevosArrays.length; i++) {
-        
-        if (i < nuevosArrays.length - 1 && nuevosArrays[i] == nuevosArrays[i + 1]) {
-            resultArray.push('X'); 
-        }
-    }
+    console.log(nuevosArrays);
 
     return nuevosArrays;
 
